@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultiToggleButton">
+        <attr name="pic1" format="reference" />
+        <attr name="pic2" format="reference" />
+        <attr name="pic3" format="reference" />
+    </declare-styleable>
+</resources>

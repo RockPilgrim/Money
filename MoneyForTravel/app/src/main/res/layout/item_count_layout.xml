@@ -61,7 +61,6 @@
 
         <TextView
             android:typeface="serif"
-
             android:id="@+id/count_textView"
             android:textColor="@color/colorPositive"
             android:layout_marginEnd="16dp"

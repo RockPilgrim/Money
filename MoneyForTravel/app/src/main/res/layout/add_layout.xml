@@ -70,10 +70,10 @@
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:textColorHint="@color/colorWhite"
         android:hint="@string/card"
-        android:layout_marginEnd="8dp">
+        android:layout_marginEnd="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/card_editText"
@@ -90,8 +90,8 @@
         android:layout_height="wrap_content"
         android:textColorHint="@color/colorWhite"
         android:hint="@string/date"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/date_editText"
@@ -104,15 +104,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:translationZ="3dp"
+        android:background="@drawable/button_style"
         android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="18dp"
         android:focusable="true"
-        android:backgroundTint="@color/colorAccent"
         android:text="@string/add"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite" />

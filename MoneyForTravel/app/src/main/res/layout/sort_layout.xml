@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorAdd"
-    android:padding="16dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
@@ -15,7 +16,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:hint="@string/count"
+            android:hint="@string/amount"
             android:textColorHint="@color/colorWhite"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -88,6 +89,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:gravity="end"
+        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

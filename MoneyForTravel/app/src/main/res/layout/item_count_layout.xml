@@ -35,7 +35,6 @@
 
             <TextView
                 android:typeface="monospace"
-
                 android:textColor="@color/colorTitleText"
                 android:id="@+id/tag_textView"
                 android:layout_gravity="bottom"

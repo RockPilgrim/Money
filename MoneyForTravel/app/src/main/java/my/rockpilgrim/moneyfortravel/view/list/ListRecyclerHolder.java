@@ -81,9 +81,12 @@ public class ListRecyclerHolder extends RecyclerView.ViewHolder {
         if (!description.equals("")) {
             descriptionTextView.setVisibility(View.VISIBLE);
             descriptionTextView.setText(description);
+            tagTextView.setTextSize(16);
         }
-        else
+        else{
             descriptionTextView.setVisibility(View.GONE);
+            tagTextView.setTextSize(24);
+        }
     }
 
     @OnClick(R.id.info_cardView)

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Money for travel</string>
-    <string name="count">Count</string>
+    <string name="amount">Amount</string>
     <string name="tag">TAG</string>
     <string name="description">Description</string>
     <string name="add">Add</string>

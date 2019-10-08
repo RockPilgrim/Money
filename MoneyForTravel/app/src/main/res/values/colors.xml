@@ -13,4 +13,5 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="colorTitleText">#232F34</color>
     <color name="colorPaper">#F0E2BA</color>
+    <color name="colorGray">#A7A7A7</color>
 </resources>

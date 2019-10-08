@@ -74,7 +74,7 @@ public class DetailPresenter extends MvpPresenter<IMvpDetailView> {
         if (Math.abs(count) <= 0.01)
             return;
         Transaction transaction = model.transactionList.get(position)
-                .setAll(count, tag, description, date);
+                .setAll(count, tag, description, model.transactionList.get(position).getDate());
         Disposable disposable = model.updateTransaction(transaction).observeOn(AndroidSchedulers.mainThread())
                 .subscribe(() -> {
                     Log.i(TAG, "updateTransaction was success");

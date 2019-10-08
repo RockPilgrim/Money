@@ -22,47 +22,30 @@
             android:layout_height="0dp"
             android:translationZ="2dp"
             app:popupTheme="@style/Theme.AppCompat.Light"/>
-
-            <LinearLayout
-                android:orientation="horizontal"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                app:tabSelectedTextColor="@color/colorWhite"
+                app:tabTextColor="@color/colorTextUnFocus"
+                app:tabIndicatorColor="@color/colorWhite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-                <Button
-                    android:padding="16dp"
-                    android:textStyle="bold"
-                    style="@style/AppTheme"
-                    android:text="@string/add_page"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="false"
-                    android:background="@drawable/button_shape"
-                    android:backgroundTint="@color/colorAdd"
+                <com.google.android.material.tabs.TabItem
                     android:id="@+id/add_button"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
-                <Button
-                    android:padding="16dp"
-                    android:textStyle="bold"
-                    style="@style/AppTheme"
-                    android:textColor="@color/colorWhite"
-                    android:textAllCaps="false"
-                    android:text="@string/sort_page"
-                    android:background="@drawable/button_shape"
-                    android:backgroundTint="@color/colorSort"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/add_page"/>
+                <com.google.android.material.tabs.TabItem
                     android:id="@+id/sort_button"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/sort"/>
+            </com.google.android.material.tabs.TabLayout>
                 <my.rockpilgrim.moneyfortravel.view.main.WrapViewPager
                     android:id="@+id/viewPager"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
-
     </com.google.android.material.appbar.AppBarLayout>
+
     <FrameLayout
         android:layout_gravity="bottom"
         android:orientation="vertical"

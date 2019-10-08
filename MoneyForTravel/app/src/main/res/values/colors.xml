@@ -8,6 +8,7 @@
     <color name="colorNegative">#F44336</color>
 
     <color name="colorAdd">#2196F3</color>
+    <color name="colorTextUnFocus">#98C2F3</color>
     <color name="colorSort">#FF5722</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="colorTitleText">#232F34</color>

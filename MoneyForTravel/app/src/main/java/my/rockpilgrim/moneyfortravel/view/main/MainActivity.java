@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.tabs.TabItem;
+import com.google.android.material.tabs.TabLayout;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -27,11 +30,9 @@ public class MainActivity extends MvpAppCompatActivity implements IMvpAddView {
     @BindView(R.id.viewPager)
     public ViewPager viewPager;
 
-    @BindView(R.id.add_button)
-    public Button addButton;
-
-    @BindView(R.id.sort_button)
-    public Button sortButton;
+    public TabLayout tabLayout;
+    public TabItem addButton;
+    public TabItem sortButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +43,35 @@ public class MainActivity extends MvpAppCompatActivity implements IMvpAddView {
         Log.i(TAG, "Ost " + (-1.05 % 1));
 
         Date date = new Date();
-//        Log.i(TAG, String.format("Date: %t", date.toString()));
         SimpleDateFormat dateFormat = new SimpleDateFormat("E dd.MM.yy");
         Log.i(TAG, "Date: " + dateFormat.format(date));
 
         ButterKnife.bind(this);
         initFragment();
         initPager();
+        initTabs();
+    }
+
+
+
+    private void initTabs() {
+        tabLayout = findViewById(R.id.tab_layout);
+        addButton = findViewById(R.id.add_button);
+        sortButton = findViewById(R.id.sort_button);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
+        });
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
     }
 
     private void initPager() {
@@ -64,20 +87,6 @@ public class MainActivity extends MvpAppCompatActivity implements IMvpAddView {
             fragmentManager.beginTransaction()
                     .add(R.id.list_container, listFragment)
                     .commit();
-        }
-    }
-
-    @OnClick({R.id.add_button, R.id.sort_button})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.add_button:
-                Log.i(TAG, "AddButton pressed");
-                viewPager.setCurrentItem(EditPagerAdapter.ADD_FRAGMENT, true);
-                break;
-            case R.id.sort_button:
-                Log.i(TAG, "SortButton pressed");
-                viewPager.setCurrentItem(EditPagerAdapter.SORT_FRAGMENT, true);
-                break;
         }
     }
 }

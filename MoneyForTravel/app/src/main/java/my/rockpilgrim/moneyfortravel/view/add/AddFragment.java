@@ -96,7 +96,6 @@ public class AddFragment extends MvpAppCompatFragment implements IMvpAddView {
                 , tagEditText.getText().toString()
                 , descriptionEditText.getText().toString()
                 , new Date().getTime());
-
         clearFields();
         closeKeyboard();
     }

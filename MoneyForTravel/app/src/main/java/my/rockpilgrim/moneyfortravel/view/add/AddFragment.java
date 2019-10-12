@@ -59,7 +59,6 @@ public class AddFragment extends MvpAppCompatFragment implements IMvpAddView {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        closeKeyboard();
     }
 
     @Nullable
